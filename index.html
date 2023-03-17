@@ -11,14 +11,15 @@
     <div id="elem" about="Elephant"></div>
   
     <script>
-      alert( elem.getAttribute('About') ); 
+      console.log( elem.getAttribute('About') ); 
   
       elem.setAttribute('Test', 123); 
   
-      alert( elem.outerHTML );
+      console.log( elem.outerHTML );
+      console.log( elem.innerHTML );
   
       for (let attr of elem.attributes) { 
-        alert( `${attr.name} = ${attr.value}` );
+        console.log( `${attr.name} = ${attr.value}` );
       }
     </script>
   
