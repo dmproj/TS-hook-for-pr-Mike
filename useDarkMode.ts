@@ -16,10 +16,8 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
     defaultValue ?? isDarkOS ?? false,
   )
 
-  // Update darkMode if os prefers changes
   useUpdateEffect(() => {
     setDarkMode(isDarkOS)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkOS])
 
   return {
