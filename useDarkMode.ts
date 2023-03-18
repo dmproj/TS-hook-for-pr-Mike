@@ -20,6 +20,10 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
     setDarkMode(isDarkOS)
   }, [isDarkOS])
 
+  useUpdateEffect(() => {
+    setDarkMode(isDarkOS)
+  }, [isDarkOS])
+
   return {
     isDarkMode,
     toggle: () => setDarkMode(prev => !prev),
