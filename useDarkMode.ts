@@ -14,7 +14,7 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
   const [isDarkMode, setDarkMode] = useLocalStorage<boolean>(
     'usehooks-ts-dark-mode',
     defaultValue ?? isDarkOS ?? false,
-  )
+  )//add ternary as requested
 
   useUpdateEffect(() => {
     setDarkMode(isDarkOS)
